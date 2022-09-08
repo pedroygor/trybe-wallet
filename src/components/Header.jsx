@@ -6,7 +6,6 @@ class Header extends Component {
   getDespesa = () => {
     const { expenses } = this.props;
     const despesas = expenses;
-    console.log(expenses);
     const despesa = despesas.length > 0 ? despesas.reduce((acc, current) => {
       acc += Number(current.value) * Number(current.exchangeRates[current.currency].ask);
       return acc;
