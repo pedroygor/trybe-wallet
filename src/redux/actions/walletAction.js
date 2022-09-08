@@ -4,6 +4,8 @@ export const GET_CURRENCY_FAILURE = 'GET_CURRENCY_FAILURE';
 export const GET_EXPENSES = 'GET_EXPENSES';
 export const GET_EXPENSES_SUCCESS = 'GET_EXPENSES_SUCCESS';
 export const DELETE_EXPENSE = 'DELETE_EXPENSE';
+export const GET_EDIT_EXPENSE = 'GET_EDIT_EXPENSE';
+export const SET_EDIT_EXPENSE = 'SET_EDIT_EXPENSE';
 
 const getCurrencySuccess = (currencies) => ({
   type: GET_CURRENCY_SUCCESS,
@@ -22,6 +24,16 @@ const getCurrency = () => ({
 export const deleteExpense = (expenseId) => ({
   type: DELETE_EXPENSE,
   expenseId,
+});
+
+export const getEditExpense = (expenseId) => ({
+  type: GET_EDIT_EXPENSE,
+  expenseId,
+});
+
+export const setEditExpense = (expense) => ({
+  type: SET_EDIT_EXPENSE,
+  expense,
 });
 
 export const getCurrencyThunk = () => async (dispatch) => {
