@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 import { getEmailActions } from '../redux/actions/userActions';
 
 class Login extends React.Component {
@@ -8,6 +9,7 @@ class Login extends React.Component {
     email: '',
     password: '',
     isValidFieldsForm: true,
+    redirect: false,
   };
 
   handleChange = (e) => {
@@ -36,14 +38,14 @@ class Login extends React.Component {
 
   handleClick = (e) => {
     e.preventDefault();
-    const { dispatch, history: { push } } = this.props;
+    const { dispatch } = this.props;
     const { email } = this.state;
     dispatch(getEmailActions(email));
-    push('/carteira');
+    this.setState({ redirect: true });
   };
 
   render() {
-    const { email, password, isValidFieldsForm } = this.state;
+    const { email, password, isValidFieldsForm, redirect } = this.state;
     return (
       <div>
         <form>
@@ -53,6 +55,7 @@ class Login extends React.Component {
               <input
                 type="text"
                 name="email"
+                placeholder="Email"
                 id="email"
                 data-testid="email-input"
                 value={ email }
@@ -67,6 +70,7 @@ class Login extends React.Component {
               <input
                 type="password"
                 name="password"
+                placeholder="Password"
                 id="password"
                 data-testid="password-input"
                 value={ password }
@@ -79,10 +83,13 @@ class Login extends React.Component {
             type="submit"
             disabled={ isValidFieldsForm }
             onClick={ this.handleClick }
+            data-testid="btn-submit"
           >
             Entrar
 
           </button>
+
+          {redirect && <Redirect to="/carteira" />}
         </form>
       </div>
     );
@@ -91,9 +98,6 @@ class Login extends React.Component {
 
 Login.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
 };
 
 export default connect()(Login);
