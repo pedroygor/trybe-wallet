@@ -70,14 +70,18 @@ class Table extends Component {
                       data-testid="delete-btn"
                       onClick={ () => this.deleteExpenseOnClick(expense.id) }
                     >
-                      <Trash />
+                      <Trash
+                        size={ 18 }
+                      />
                     </button>
                     <button
                       type="reset"
                       data-testid="edit-btn"
                       onClick={ () => this.getEditExpenseOnClick(expense.id) }
                     >
-                      <PencilLine />
+                      <PencilLine
+                        size={ 18 }
+                      />
                     </button>
                   </div>
                 </td>

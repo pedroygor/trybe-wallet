@@ -84,7 +84,7 @@ class WalletForm extends Component {
     const { value, currency, method, tag, description } = this.state;
     return (
 
-      <form className="mt-4 mx-auto w-4/5 text-sky-800">
+      <form className="mt-6 mx-auto w-4/5 text-sky-800">
         <div className="flex gap-2 justify-between items-center">
           <label htmlFor="value" className="flex gap-1 font-bold">
             Valor
@@ -168,13 +168,13 @@ class WalletForm extends Component {
             </select>
           </label>
         </div>
-        <div className="w-full flex justify-center mt-6">
+        <div className="w-full flex justify-center mt-8">
           {
             isEdit
               ? (
                 <button
-                  className="bg-sky-700 text-white px-3 py-1 w-48 rounded
-                hover:bg-sky-800"
+                  className="bg-emerald-600 text-white px-3 py-1 w-72 rounded
+                hover:bg-emerald-700"
                   type="submit"
                   onClick={ this.editExpenseOnclick }
                 >
@@ -183,8 +183,8 @@ class WalletForm extends Component {
               )
               : (
                 <button
-                  className="bg-sky-700 text-white px-3 py-1 w-48 rounded
-                  hover:bg-sky-800"
+                  className="bg-emerald-600 text-white px-3 py-1 w-72 rounded
+                  hover:bg-emerald-700"
                   type="submit"
                   onClick={ this.handleClick }
                 >
