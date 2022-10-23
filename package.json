@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
+    "gh-pages": "^4.0.0",
     "phosphor-react": "^1.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -21,7 +22,10 @@
     "redux-thunk": "2.4.1",
     "stylelint-order": "5.0.0"
   },
+  "homepage": "https://pedroygor.github.io/trybe-wallet",
   "scripts": {
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "cy": "env CY_CLI=true cypress run",
     "cy:open": "cypress open --e2e --browser chrome",
     "start": "env ESLINT_NO_DEV_ERRORS=true react-scripts start",
