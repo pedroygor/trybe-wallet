@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import { getEmailActions } from '../redux/actions/userActions';
+import logo from '../assets/logo.svg';
 
 class Login extends React.Component {
   state = {
@@ -47,12 +48,34 @@ class Login extends React.Component {
   render() {
     const { email, password, isValidFieldsForm, redirect } = this.state;
     return (
-      <div>
-        <form>
+      <div
+        className="bg-blend-normal bg-emerald-500 h-screen bg-bg-login bg-cover
+        flex justify-center items-center"
+      >
+        <form
+          className="w-128 h-[20rem] rounded bg-white
+          flex flex-col justify-start items-center gap-4"
+        >
+          <div
+            className="mt-14 flex justify-center gap-2 items-center text-3xl font-sans"
+          >
+            <img src={ logo } alt="" />
+            <h2 className="font-bold text-emerald-500">
+              <span
+                className="text-sky-700 mr-1 font-normal"
+              >
+                Trybe
+
+              </span>
+              Wallet
+            </h2>
+          </div>
           <div>
             <label htmlFor="email">
-              Email
+
               <input
+                className="border border-solid border-sky-700 px-2 py-1 rounded w-72
+                outline-none"
                 type="text"
                 name="email"
                 placeholder="Email"
@@ -66,8 +89,10 @@ class Login extends React.Component {
           </div>
           <div>
             <label htmlFor="password">
-              Password
+
               <input
+                className="border border-solid border-sky-700 px-2 py-1 rounded w-72
+                outline-none"
                 type="password"
                 name="password"
                 placeholder="Password"
@@ -80,6 +105,7 @@ class Login extends React.Component {
             </label>
           </div>
           <button
+            className="w-72 bg-sky-700 py-1 rounded text-white font-bold text-base"
             type="submit"
             disabled={ isValidFieldsForm }
             onClick={ this.handleClick }
