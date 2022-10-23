@@ -12,11 +12,6 @@ const getCurrencySuccess = (currencies) => ({
   currencies,
 });
 
-const getCurrencyFailure = (error) => ({
-  type: GET_CURRENCY_FAILURE,
-  error,
-});
-
 const getCurrency = () => ({
   type: GET_CURRENCY,
 });
@@ -38,17 +33,13 @@ export const setEditExpense = (expense) => ({
 
 export const getCurrencyThunk = () => async (dispatch) => {
   dispatch(getCurrency());
-  try {
-    const URL_CURRENCY = 'https://economia.awesomeapi.com.br/json/all';
+  const URL_CURRENCY = 'https://economia.awesomeapi.com.br/json/all';
 
-    const response = await fetch(URL_CURRENCY);
-    const data = await response.json();
-    const currencies = Object.keys(data)
-      .filter((currency) => currency !== 'USDT');
-    dispatch(getCurrencySuccess(currencies));
-  } catch (error) {
-    dispatch(getCurrencyFailure(error.message));
-  }
+  const response = await fetch(URL_CURRENCY);
+  const data = await response.json();
+  const currencies = Object.keys(data)
+    .filter((currency) => currency !== 'USDT');
+  dispatch(getCurrencySuccess(currencies));
 };
 
 export const getExpenses = (expenses) => ({

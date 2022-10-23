@@ -83,11 +83,14 @@ class WalletForm extends Component {
     const { currencies, isEdit } = this.props;
     const { value, currency, method, tag, description } = this.state;
     return (
-      <div>
-        <form>
-          <label htmlFor="value">
+
+      <form className="mt-6 mx-auto w-4/5 text-sky-800">
+        <div className="flex gap-2 justify-between items-center">
+          <label htmlFor="value" className="flex gap-1 font-bold">
             Valor
             <input
+              className="border border-sky-700 rounded w-36 outline-none pl-1 font-normal
+              focus:border-sky-700 focus:ring-1 focus:ring-sky-700"
               data-testid="value-input"
               type="number"
               name="value"
@@ -97,9 +100,11 @@ class WalletForm extends Component {
             />
           </label>
 
-          <label htmlFor="description">
-            Descrição
+          <label htmlFor="description" className="flex gap-1 font-bold">
+            Descrição da despesa
             <input
+              className="border border-sky-700 rounded w-80 outline-none pl-1 font-normal
+              focus:border-sky-700 focus:ring-1 focus:ring-sky-700"
               data-testid="description-input"
               type="text"
               name="description"
@@ -108,10 +113,13 @@ class WalletForm extends Component {
               onChange={ this.handleChange }
             />
           </label>
-
-          <label htmlFor="currency">
+        </div>
+        <div className="flex gap-2 justify-between items-center mt-4">
+          <label htmlFor="currency" className="flex gap-1 font-bold">
             Moeda
             <select
+              className="border border-sky-700 rounded font-normal outline-none pl-1
+              focus:border-sky-700 focus:ring-1 focus:ring-sky-700 w-24"
               data-testid="currency-input"
               name="currency"
               id="currency"
@@ -119,14 +127,16 @@ class WalletForm extends Component {
               onChange={ this.handleChange }
             >
               {currencies.map((item) => (
-                <option key={ item }>{item}</option>
+                <option key={ item } value={ item }>{item}</option>
               ))}
             </select>
           </label>
 
-          <label htmlFor="expenses">
+          <label htmlFor="expenses" className="flex gap-1 font-bold">
             Método de Pagamento
             <select
+              className="border border-sky-700 rounded font-normal outline-none pl-1
+            focus:border-sky-700 focus:ring-1 focus:ring-sky-700 w-40"
               name="method"
               id="expenses"
               data-testid="method-input"
@@ -139,9 +149,11 @@ class WalletForm extends Component {
             </select>
           </label>
 
-          <label htmlFor="tag">
+          <label htmlFor="tag" className="flex gap-1 font-bold">
             Categorias
             <select
+              className="border border-sky-700 rounded font-normal outline-none pl-1
+            focus:border-sky-700 focus:ring-1 focus:ring-sky-700 w-40"
               name="tag"
               id="tag"
               value={ tag }
@@ -155,11 +167,14 @@ class WalletForm extends Component {
               <option value="Saúde">Saúde</option>
             </select>
           </label>
-
+        </div>
+        <div className="w-full flex justify-center mt-8">
           {
             isEdit
               ? (
                 <button
+                  className="bg-emerald-600 text-white px-3 py-1 w-72 rounded
+                hover:bg-emerald-700"
                   type="submit"
                   onClick={ this.editExpenseOnclick }
                 >
@@ -168,6 +183,8 @@ class WalletForm extends Component {
               )
               : (
                 <button
+                  className="bg-emerald-600 text-white px-3 py-1 w-72 rounded
+                  hover:bg-emerald-700"
                   type="submit"
                   onClick={ this.handleClick }
                 >
@@ -175,8 +192,9 @@ class WalletForm extends Component {
                 </button>
               )
           }
-        </form>
-      </div>
+        </div>
+      </form>
+
     );
   }
 }
