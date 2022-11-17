@@ -31,4 +31,4 @@ React, Redux, Phosphor-react, Tailwind, Jest e React Testing Library.
 
 - `npm test`
 
-[Site - https://pedroygor-trybe-wallet.netlify.app/](https://pedroygor-trybe-wallet.netlify.app/) - :computer:
+#### [Link para o site](https://pedroygor-trybe-wallet.netlify.app/)
