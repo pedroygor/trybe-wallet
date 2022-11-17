@@ -1,6 +1,6 @@
 # Trybe Wallet
 
-Este projeto trata-se de uma aplicação front-end sobre controle de despesas e gastos mensais.
+Este projeto trata-se de uma carteira de controle de gastos com conversor de moedas.
 
 ### Funcionalidades
 
@@ -30,3 +30,5 @@ React, Redux, Phosphor-react, Tailwind, Jest e React Testing Library.
 4. Opcional - Rodar o testes
 
 - `npm test`
+
+[Site - https://pedroygor-trybe-wallet.netlify.app/](https://pedroygor-trybe-wallet.netlify.app/) - :computer:
