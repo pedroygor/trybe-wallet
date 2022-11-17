@@ -27,7 +27,7 @@ React, Redux, Phosphor-react, Tailwind, Jest e React Testing Library.
 
 - `npm start`
 
-4. Opcional - Rodar o testes
+4. Opcional - Rodar os testes
 
 - `npm test`
 
