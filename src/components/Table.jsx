@@ -72,6 +72,7 @@ class Table extends Component {
                     >
                       <Trash
                         size={ 18 }
+                        className="hover:text-red-400 ease-out duration-300"
                       />
                     </button>
                     <button
@@ -81,6 +82,7 @@ class Table extends Component {
                     >
                       <PencilLine
                         size={ 18 }
+                        className="hover:text-emerald-600 ease-out duration-300"
                       />
                     </button>
                   </div>
