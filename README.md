@@ -1,6 +1,6 @@
 # Este projeto trata-se de uma carteira de controle de gastos com conversor de moedas.
 
-![imagem](src/assets/wallet.png)
+![exemplo](src/assets/wallet.png)
 
 ## :wrench: Funcionalidades
 
