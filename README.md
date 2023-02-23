@@ -2,15 +2,20 @@
 
 Este projeto trata-se de uma carteira de controle de gastos com conversor de moedas.
 
-### Funcionalidades
+## Funcionalidades
 
 - Adicionar, remover e editar um gasto;
 - Visualizar uma tabela com seus gastos;
 - Visualizar o total de gastos convertidos para uma moeda de escolha;
 
-### Tecnologias Usadas
+## :rocket: Tecnologias Usadas
 
-React, Redux, Phosphor-react, Tailwind, Jest e React Testing Library.
+- React
+- Redux
+- Phosphor-react
+- Tailwind
+- Jest
+- React Testing Library.
 
 ### Orientações
 
