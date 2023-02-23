@@ -1,8 +1,8 @@
-# Trybe Wallet
+# Este projeto trata-se de uma carteira de controle de gastos com conversor de moedas.
 
-Este projeto trata-se de uma carteira de controle de gastos com conversor de moedas.
+![imagem](src/assets/wallet.png)
 
-## Funcionalidades
+## :wrench: Funcionalidades
 
 - Adicionar, remover e editar um gasto;
 - Visualizar uma tabela com seus gastos;
@@ -17,7 +17,7 @@ Este projeto trata-se de uma carteira de controle de gastos com conversor de moe
 - Jest
 - React Testing Library.
 
-### Orientações
+## 📜 Orientações
 
 1. Clone Repositório
 
@@ -36,4 +36,4 @@ Este projeto trata-se de uma carteira de controle de gastos com conversor de moe
 
 - `npm test`
 
-#### [Link para o site](https://pedroygor-trybe-wallet.netlify.app/)
+### 🔗 [Link para o site](https://pedroygor-trybe-wallet.netlify.app/)
