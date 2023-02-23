@@ -1,6 +1,12 @@
-# Este projeto trata-se de uma carteira de controle de gastos com conversor de moedas.
+<h1 align="center">Wallet</h1>
 
-![exemplo](src/assets/wallet.png)
+<p align="center">
+ <img src="src/assets/wallet.png" width="100%">
+</p>
+
+## :book: Sobre o projeto
+
+Este projeto trata-se de uma carteira de controle de gastos com conversor de moedas.
 
 ## :wrench: Funcionalidades
 
